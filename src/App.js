@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
+import {Login,TopAppBar} from './components'
+import {AppStateProvider} from './context'
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* context helps in locating all the state of the application in one file 
+      and being able to manipulate it from there rather than individual components */}
+      <AppStateProvider>
+        <TopAppBar></TopAppBar>
+          <Login></Login>
+      </AppStateProvider>      
     </div>
   );
 }
