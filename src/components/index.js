@@ -1,5 +1,5 @@
 
 import Login from "./Login"
-import TopAppBar from "./TopAppBar"
+import NavBar from "./NavBar"
 
-export  {Login,TopAppBar}
+export  {Login,NavBar}

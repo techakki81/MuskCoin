@@ -5,23 +5,25 @@ import {constants} from '../utils'
 export default function Login() {
     
     const {state:{login},dispatch} = useAppState();
-    const {dispatchLoginClick} = constants
+    const {dispatchLoginClick} = constants 
     
-    
-
-    //const login= { isLoggedIn:false,loggedInName:""}
     const onLoginClick = (e)=>{
-        e.preventDefault()
-        login.isLoggedIn = true
-        login.loggedInName = "akshay@akshaykoul.com"
-        dispatch({type:dispatchLoginClick, payload:login})
+        e.preventDefault()     
+        dispatch(
+            {
+                type:dispatchLoginClick, 
+                payload:{
+                    isLogged:true,
+                    loggedInName:"akshay"
+                }
+            }
+            )
     }
 
     return (
         <div>
-            <button onClick={onLoginClick}>
-                Logged in 
-            {/* {isLoggedIn?"Name":"Login"} */}
+            <button onClick={onLoginClick}>               
+                {login.isLogged? login.loggedInName:"Login"} 
             </button>
         </div>
     )
