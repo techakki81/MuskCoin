@@ -1,30 +1,14 @@
 import React from 'react'
 import {useAppState} from '../context'
-import {constants} from '../utils'
+import {Link} from 'react-router-dom'
 
 export default function Login() {
     
-    const {state:{login},dispatch} = useAppState();
-    const {dispatchLoginClick} = constants 
-    
-    const onLoginClick = (e)=>{
-        e.preventDefault()     
-        dispatch(
-            {
-                type:dispatchLoginClick, 
-                payload:{
-                    isLogged:true,
-                    loggedInName:"akshay"
-                }
-            }
-            )
-    }
-
+    const {state:{login}} = useAppState();
+   
     return (
         <div>
-            <button onClick={onLoginClick}>               
-                {login.isLogged? login.loggedInName:"Login"} 
-            </button>
+           {login.isLogged? login.loggedInName:<Link to="/signIn">SignIn</Link>}             
         </div>
     )
 }
