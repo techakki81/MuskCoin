@@ -28,7 +28,7 @@ export default function Login() {
 
     return (         
                            
-    <div className ="w-full lg:max-w-full lg:flex m-6">
+    <div className ="w-full lg:max-w-full lg:flex m-6 justify-center">
       <div 
         className="
           h-48 
@@ -45,7 +45,7 @@ export default function Login() {
       
       <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
           <input 
-            className="w-96 h-12 border-2 border-blue-200" 
+            className="w-96 h-12 border-2 border-gray-400" 
             type="text" 
             ref={inptRef} 
             placeholder="account name" />
