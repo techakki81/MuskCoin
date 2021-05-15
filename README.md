@@ -30,11 +30,16 @@ npm run storybook
        its too much to learn again for simple responsive, if you already know css
        even class names are not based on some nomencluare like 
        self-center	actuallly sets align-self: center;
+       every property has one entry in Dev tool..too much to go down
 
 3. create Navbar 
 4. React Router 
     4.1 npm i react-router-dom
     Under Pages create a Login form 
+
+5. Create Musk Coin / Block chain
+    npm install crypto-js
+    
 
 
     

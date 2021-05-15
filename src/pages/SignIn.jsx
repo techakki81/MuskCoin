@@ -28,14 +28,18 @@ export default function Login() {
 
     return (         
                            
-    <div className ="w-full lg:max-w-full lg:flex m-6 justify-center">
+    <div className ="md:w-2/4 w-full lg:max-w-full lg:flex m-6 justify-center">
       <div 
         className="
           h-48 
+          md:w-96
+          md:h-40
           lg:h-auto 
           lg:w-48 
           flex-none 
-          bg-cover 
+          // talk about lg and bg
+          lg:bg-cover           
+          md:bg-contain
           rounded-t 
           lg:rounded-t-none 
           lg:rounded-l 
@@ -45,7 +49,7 @@ export default function Login() {
       
       <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
           <input 
-            className="w-96 h-12 border-2 border-gray-400" 
+            className="lg:w-96 md:w-full h-12 border-2 border-gray-400" 
             type="text" 
             ref={inptRef} 
             placeholder="account name" />
@@ -53,7 +57,8 @@ export default function Login() {
           <button className="
             m-4
             w-20
-            self-center
+            lg:self-center
+            md:self-start
             bg-gray-300 
             hover:bg-gray-400 
             text-gray-800 
