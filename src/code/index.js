@@ -1,4 +1,4 @@
 import MuskCoin from './MuskCoin'
-import BlockChain from './BlockChain'
+import MuskChain from './MuskChain'
 
-export {BlockChain,MuskCoin }
+export {MuskChain,MuskCoin }

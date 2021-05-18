@@ -7,6 +7,9 @@ youtube:
 We will be using the following libraries for musk-coin
 ### React 
 ### TailWind 
+### Singelton pattern
+### Object creation
+
 
 ### Commands
 create-react app
@@ -37,9 +40,20 @@ npm run storybook
     4.1 npm i react-router-dom
     Under Pages create a Login form 
 
-5. Create Musk Coin / Block chain
+5. Create Musk Coin / Block chain code 
     npm install crypto-js
-    
+    npm install uuid
+    npm i react-use-localstorage
 
+6. Add Musk Chain interaction buttons on Actions dashboard
+    Actions component
+    Dashboard component 
+    Home PageComponent 
+    
+7. Error boundary any time your get an error . No Hook implementation
+    still need to fall back on Class
+
+TODO:
+what if the user directly goes to a route. The route should block it 
 
     

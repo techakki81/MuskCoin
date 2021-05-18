@@ -1,2 +1,4 @@
 import constants from './constants'
-export {constants}
+import labels from './labels'
+
+export {constants,labels}

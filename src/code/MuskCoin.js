@@ -1,16 +1,18 @@
 import sha256 from 'crypto-js/sha256'
 
- function MuskCoin(index,cost,parentCoin) {
+ function MuskCoin(index,data,owner,parentHash) {
      this.index = index
-     this.cost = cost 
-
-     this.previousHash = typeof parentCoin=== MuskCoin? parentCoin.hash:parentCoin
+     this.data = data 
+     this.owner = owner
+     this.parentHash = parentHash
      this.timestamp = Date.now()
-     this.hash = getCoinsHash()
+     // this will now work as its looking at window obj and there is no getCoinHash
+     //this.hash = this.getCoinsHash()
+     this.hash = this.getCoinsHash()
 
      // the function declaration wont work ....has to be lambda
      this.getCoinsHash =() =>{
-        return sha256(`${this.cost} : ${this.timestamp}` );
+        return sha256(`${this.data} : ${this.timestamp} : ${this.timestamp}` );
      }
    }
 
