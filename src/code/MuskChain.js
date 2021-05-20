@@ -6,19 +6,21 @@ import useLocalStorage from 'react-use-localstorage';
 import {constants} from '../utils'
 
 
-function MuskChain() {    
+const MuskChain  = function() {    
 
     this.id = uuidv4()
 
     // load from the localstorage... if nothing then create one
-    const [item, setItem] = useLocalStorage('keyMuskCoin', 'Initial Value');
+    const [item, setItem] = useLocalStorage('keyMuskCoin', null );
     const {keyLocalStrgMuskChain} = constants;
     
-    this.blockChain = item ? JSON.parse( item ): [this.createFirstBlock()]
-
-    this.createFirstBlock =()=>{
+    this.createFirstBlock = ()=> {
         return new MuskCoin(0,0,0)
     }
+
+    this.blockChain = item ? JSON.parse( item ): [this.createFirstBlock()]
+    let i = 23
+    
 
     this.getLastBlock = () =>{
         return this.blockChain.slice(-1)

@@ -1,5 +1,8 @@
 import React from 'react'
+// import {NavBar} from '../components'
+import {constants} from '../utils'
 import err from '../icons/error.gif'
+
 class ErrorBoundary extends React.Component {
     constructor(props) {
       super(props);
@@ -18,20 +21,35 @@ class ErrorBoundary extends React.Component {
     }
   
     render() {
+      const {theme:{cssBgColorMain}} = constants
+
       if (this.state.hasError) {
         // You can render any custom fallback UI
+         {/* TODO: implement the navbar  */}
         return (
                 <>
-                {/* TODO: better ui */}
-                   <h1 style={{color:'red'}}>
-                       World's Software is fillled with ERROR                     
-                   </h1>
-                   <img src={err}/>
-                       
-                   <h2>
-                     Lets go to Mars
-                   </h2>    
-                </>
+                {/* <NavBar></NavBar>               */}
+                <main className={`flex justify-center  p-8 ${cssBgColorMain}`}>
+                  {/* left side */}
+                  <section className="m-8">
+                    <h2 className="text-4xl text-black mb-8">
+                       Oops ! World is fillled with errors..                     
+                    </h2>
+                    <h3 className="text-2xl text-black">
+                       Lets go to Mars instead 
+                    </h3>
+                  </section>
+                 
+                  <section>
+                    <picture>
+                      <source media="(min-width:650px)" srcset={err}/>
+                      <source media="(min-width:465px)" srcset={err}/>
+                      <img src={err} alt="Flowers"  className="rounded-full" />
+                    </picture> 
+                  </section> 
+
+                </main>
+               </>
                 
         )
       }

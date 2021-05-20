@@ -1,12 +1,13 @@
 import React from 'react'
 import {MuskChain} from '../code'
+import muskIco from '../icons/musk.ico'
 
 export default function ShowMuskChain() {
  
- console.log(MuskChain.getInstance().getChain())
+ //console.log(MuskChain.getInstance().getChain())
     return (
-        <div>
-            Musk Chain 
-        </div>
+        <main> 
+            
+        </main>
     )
 }
