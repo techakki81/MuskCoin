@@ -1,7 +1,7 @@
 import sha256 from 'crypto-js/sha256'
 
- const MuskCoin =  function(index,data,owner,parentHash) {
-     this.index = index
+ const MuskCoin =  function(data,owner,parentHash) {
+  //   this.index = index
      this.data = data 
      this.owner = owner
      this.parentHash = parentHash

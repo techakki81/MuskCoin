@@ -10,6 +10,7 @@ export default function NavBar() {
     const {state:{login:{isLogged}}} = useAppState()
     const {theme:{cssBgColorMain}} = constants
     console.log(isLogged)   
+    const temp = true
 
     // with bg-yello-700, i already have a theme pre selected. now i can
     // make use of the same pallette for buttons etc . i used yellow as i wanted 
@@ -23,13 +24,21 @@ export default function NavBar() {
                      <img src={muskIco} alt="Flowers" style={{width:'auto'}}/>                           
                 </picture>
 
-                { isLogged && <div className="m-6  mr-6">
-                    <button>Show BlockChain</button>
-                </div>}
+                { temp && 
+                <div>
+                    <div className="m-6  mr-6">
+                         <button>Show BlockChain</button>
+                    </div>
 
-                { isLogged && <div className="m-6  mr-6">
-                    <button>Mint Coin</button>
-                </div>}
+                    <div className="m-6  mr-6">
+                        <Link to="/mint">
+                            <button>Mint Musk</button>
+                        </Link>                      
+                    </div>
+                </div>
+                }
+
+                
                 
                 <div className="m-6  mr-6">
                     <Login />  

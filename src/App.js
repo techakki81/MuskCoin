@@ -2,7 +2,7 @@ import './App.css'
 
 import {AppStateProvider} from './context'
 import {BrowserRouter,Route} from 'react-router-dom'
-import {SignIn,Home} from './pages'
+import {SignIn,Home,Mint} from './pages'
 import {ErrorBoundary, NavBar} from './components'
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
             
               <Route path="/" exact component={Home} />
               <Route path="/signIn"  component={SignIn} />   
+              <Route path="/mint"  component={Mint} />
 
               {/* TODO */}
 {/*            

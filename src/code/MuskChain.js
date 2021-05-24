@@ -31,6 +31,7 @@ const MuskChain  = function() {
         setItem(JSON.stringify(this.blockChain))
     }
     
+    
     this.isValidChain =()=>{
         
         //this.chain.every()

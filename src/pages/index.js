@@ -1,3 +1,4 @@
 import Home from './Home'
 import SignIn from './SignIn'
-export {Home, SignIn}
+import Mint from './Mint'
+export {Home, SignIn,Mint}
