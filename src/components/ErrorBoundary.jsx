@@ -42,8 +42,8 @@ class ErrorBoundary extends React.Component {
                  
                   <section>
                     <picture>
-                      <source media="(min-width:650px)" srcset={err}/>
-                      <source media="(min-width:465px)" srcset={err}/>
+                      <source media="(min-width:650px)" srcSet={err}/>
+                      <source media="(min-width:465px)" srcSet={err}/>
                       <img src={err} alt="Flowers"  className="rounded-full" />
                     </picture> 
                   </section> 

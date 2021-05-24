@@ -1,6 +1,6 @@
 import sha256 from 'crypto-js/sha256'
 
- const MuskCoin =  function(data,owner,parentHash) {
+ const MuskCoin =  function(data,owner,parentHash="") {
   //   this.index = index
      this.data = data 
      this.owner = owner
@@ -11,7 +11,9 @@ import sha256 from 'crypto-js/sha256'
 
      // the function declaration wont work ....has to be lambda
      this.getCoinsHash = function(){
-        return sha256(`${this.data} : ${this.timestamp} : ${this.timestamp}` );
+        let hash = sha256(`${this.data} : ${this.timestamp} : ${this.timestamp}` ).toString() 
+        this.hash = hash
+        return hash 
      }
    }
 
